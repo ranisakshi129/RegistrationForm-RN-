@@ -1,16 +1,29 @@
+// App.js
 import React from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import Form from './components/Form';
 import Lists from './components/Lists';
 import ListWithMapFunction from './components/ListWithMapFunction';
+import DynamicGridUsingStaticData from './components/DynamicGridUsingStaticData';
+import DynamicGridUsingDynamicData from './components/DynamicGridUsingDynamicData';
+import ComponentsInLoopUsingFlatList from './components/ComponentsInLoopUsingFlatlist';
+import SectionListDemo from './components/SectionListDemo';
+import ClassComponent from './components/ClassComponent'
+import StateAndPropsInClassComponent from './components/StateAndPropsInClassComponent';
+import LifeCycleWithUseEffect from './components/LifeCycleWithUseEffect';
+import UserForm from './components/UserForm';
+import CardComponent from './components/CardComponent';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginScreen from './screens/LoginScreen';
+import HomeScreen from './screens/HomeScreen';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <ScrollView style={styles.container}>
-      {/* <Form /> */}
-      <Lists />
-      <ListWithMapFunction/>
-    </ScrollView>
+<CardComponent/>
+
   );
 };
 

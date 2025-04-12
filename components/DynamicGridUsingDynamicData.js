@@ -1,8 +1,7 @@
-import React from'react'
-import { StyleSheet, ScrollView, View, Text } from'react-native'
-
-const ListWithMapFunction = () =>{
-
+import React from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
+const DynamicGridUsingDynamicData = () => {
+    
     const users =[
         {   
             id : 1,
@@ -63,29 +62,27 @@ const ListWithMapFunction = () =>{
     ]
     return (
         <View>
-            <Text style = {{fontSize :25, textAlign: 'center'}}>List with Map function</Text>
-            <ScrollView  style = {{marginBottom : 50}}>
-            {
-                users.map((item) =><Text style = {styles.items}>{item.name}</Text>)
-            }
-            </ScrollView>
+            <Text style={{ fontSize: 20, textAlign:'center' }}>Dynamic Grid Dynamic Data</Text>
+            <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
+                {
+                    users.map((item) => <Text style={styles.item}>{item.name}</Text>)
+                }
+            </View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    items:
-    {
-        fontSize : 20,
-        padding : 10,
-        color : 'black',
-        backgroundColor : 'pink',
-        borderColor : 'black',
-        borderWidth : 1,
-        borderRadius : 10,
-        margin : 10
+    item: {
+        fontSize: 25,
+        backgroundColor: 'green',
+        color: '#fff',
+        margin: 5,
+        padding: 5,
+        width: 160,
+        height: 120,
+        textAlignVertical: 'center',
+        textAlign: 'center'
     }
 })
-
-
-export default ListWithMapFunction;
+export default DynamicGridUsingDynamicData;
